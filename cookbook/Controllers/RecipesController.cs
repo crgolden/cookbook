@@ -54,7 +54,6 @@ namespace cookbook.Controllers
             return Json(recipe.Id);
         }
 
-        [HttpPut("{id}")]
         public async Task<IActionResult> Edit(Guid? id, [FromBody, Bind("RecipeId,Title,Description,DateCreated")] RecipeVersion recipeVersion)
         {
             if (id == null || id.Value != recipeVersion.RecipeId || !ModelState.IsValid)
@@ -77,7 +76,6 @@ namespace cookbook.Controllers
             return Ok();
         }
 
-        [HttpDelete("{id}")]
         public async Task<IActionResult> Delete(Guid? id)
         {
             if (id == null)
