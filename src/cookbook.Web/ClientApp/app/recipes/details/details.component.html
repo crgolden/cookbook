@@ -1,0 +1,69 @@
+<style>
+    .version:hover {
+        color: #0056b3;
+        text-decoration: underline;
+    }
+
+    .version {
+        color: #007bff;
+        text-decoration: none;
+        background-color: transparent;
+        cursor: pointer;
+    }
+</style>
+
+<div class="row">
+    <div class="col-sm-1 col-md-3"></div>
+    <div class="col-sm-10 col-md-6">
+        <h2>Recipe Details</h2>
+        <hr />
+    </div>
+    <div class="col-sm-1 col-md-3"></div>
+</div>
+<div class="row">
+    <div class="col-sm-1 col-md-3"></div>
+    <div class="col-sm-5 col-md-3">
+        <dl>
+            <dt>
+                Title
+            </dt>
+            <dd>
+                {{selectedVersion.title}}
+            </dd>
+            <dt>
+                Description
+            </dt>
+            <dd>
+                {{selectedVersion.description}}
+            </dd>
+            <dt>
+                Date Modified
+            </dt>
+            <dd>
+                {{selectedVersion.dateCreated | date}}
+            </dd>
+        </dl>
+    </div>
+    <div class="col-sm-5 col-md-3">
+        <dl>
+            <dt>
+                Versions:
+            </dt>
+            <dd *ngFor="let recipeVersion of recipe.recipeVersions; let i = index" (click)="selectVersion(recipeVersion)">
+                {{i + 1}}. <span class="version">{{recipeVersion.dateCreated | date}} - {{recipeVersion.title}}</span>
+            </dd>
+        </dl>
+    </div>
+    <div class="col-sm-1 col-md-3"></div>
+</div>
+<div class="row">
+    <div class="col-sm-1 col-md-3"></div>
+    <div class="col-sm-10 col-md-6">
+        <hr />
+        <a routerLink="/Recipes/Edit/{{recipe.id}}">Edit</a> |
+        <a routerLink="/Recipes/Delete/{{recipe.id}}">Delete</a> |
+        <a routerLink="/Recipes">View All Recipes</a> |
+        <a routerLink="/Home">Home</a>
+    </div>
+    <div class="col-sm-1 col-md-3"></div>
+</div>

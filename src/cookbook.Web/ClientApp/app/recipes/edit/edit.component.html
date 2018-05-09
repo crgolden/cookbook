@@ -1,0 +1,33 @@
+<div class="row">
+    <div class="col-sm-1 col-md-3"></div>
+    <div class="col-sm-10 col-md-6">
+        <h2>Edit Recipe</h2>
+        <hr />
+    </div>
+    <div class="col-sm-1 col-md-3"></div>
+</div>
+<div class="row">
+    <div class="col-sm-1 col-md-3"></div>
+    <div class="col-sm-10 col-md-6">
+        <form #f="ngForm" novalidate (ngSubmit)="edit(f)">
+
+            <div class="form-group">
+                <label for="title">Title</label>
+                <input [(ngModel)]="recipeVersion.title" id="title" name="title" type="text" required class="form-control" placeholder="Title" #name="ngModel">
+            </div>
+
+            <div class="form-group">
+                <label for="description">Description</label>
+                <input [(ngModel)]="recipeVersion.description" id="description" name="description" type="text" required class="form-control" placeholder="Description" #name="ngModel">
+            </div>
+
+            <div class="form-group">
+                <button type="submit" class="btn btn-success" [disabled]="f.invalid">Save</button> |
+                <a routerLink="/Recipes">View All Recipes</a> |
+                <a routerLink="/Home">Home</a>
+            </div>
+
+        </form>
+    </div>
+    <div class="col-sm-1 col-md-3"></div>
+</div>

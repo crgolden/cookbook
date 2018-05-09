@@ -1,0 +1,30 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\cookbook.API\cookbook.API.csproj" />
+    <ProjectReference Include="..\..\src\cookbook.Interfaces\cookbook.Interfaces.csproj" />
+    <ProjectReference Include="..\..\src\cookbook.Data\cookbook.Data.csproj" />
+    <ProjectReference Include="..\..\src\cookbook.Services\cookbook.Services.csproj" />
+    <ProjectReference Include="..\..\src\cookbook.Models\cookbook.Models.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.TestHost" Version="2.0.2" />
+    <PackageReference Include="Moq" Version="4.7.142" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="2.0.3" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.6.2" />
+    <PackageReference Include="NETStandard.Library" Version="2.0.2" />
+    <PackageReference Include="xunit" Version="2.3.1" />
+    <PackageReference Include="xunit.runner.console" Version="2.3.1" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.3.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <DotNetCliToolReference Include="Microsoft.DotNet.Watcher.Tools" Version="2.0.1" />
+  </ItemGroup>
+
+</Project>

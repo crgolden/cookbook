@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+    <AssemblyName>cookbook.Services</AssemblyName>
+    <PackageId>cookbook.Services</PackageId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\cookbook.Interfaces\cookbook.Interfaces.csproj" />
+    <ProjectReference Include="..\cookbook.Models\cookbook.Models.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="2.0.2" PrivateAssets="All" />    </ItemGroup>
+
+</Project>
